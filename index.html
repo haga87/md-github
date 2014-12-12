@@ -79,8 +79,12 @@
         </div>
     </div>
     <div class="hidden" id="regalo">
-        <p> Hola Glou, felicidades!!!!!</p>
-        <p> Tu regalo es una tarjeta de spotify para que escuches toda la Janis Joplin que quieras :D</p>
+        <p style="color:black; font-weight:bold;"> 
+                Hola Glou, felicidades!!!!!<br/>
+                Tu regalo es una tarjeta de spotify para que escuches toda la Janis Joplin que quieras :D<br/>
+                Tarjeta: 60395341002005635171<br/>
+                Pin: BHNF9DM645E 
+        </p>
     </div>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -104,7 +108,7 @@
                     return false;    
                 }
                 else{
-                    alert("rigth");
+                    $("#modal-body").html($("#regalo").html());
                     return false;
                 }
             });
