@@ -96,9 +96,14 @@
     <script>new WOW().init();</script>    
     <script>
         $(document).ready(function(){
+            var campanas = new Audio('audio/campanas.mp3');
+            var audio = new Audio('audio/ahahah.mp3');
+            campanas.play();
+            
             $('#present').on('show.bs.modal', function (e) {
-                var audio = new Audio('audio/ahahah.mp3');
+                campanas.pause();
                 audio.play();
+                
             });
             $("#form").submit(function(){
                 if($("#magicword").val() !== "Feliz Navidad!"){
@@ -111,6 +116,11 @@
                     $("#modal-body").html($("#regalo").html());
                     return false;
                 }
+            });
+
+            $('.close').click(function(e){
+                audio.pause();
+                audio = new Audio('audio/ahahah.mp3');
             });
         })
     </script>
